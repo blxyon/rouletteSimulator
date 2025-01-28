@@ -2,6 +2,8 @@
 
 A simple **roulette game** using **HTML, CSS, and JavaScript**. Players bet on a color (Red, Black, or Green) and spin the wheel to see if they win.
 
+Page: https://blxyon.github.io/rouletteSimulator/
+
 ---
 
 ## Features
