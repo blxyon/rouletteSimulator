@@ -1,0 +1,243 @@
+/* Background Animation */
+@keyframes backgroundPulse {
+    0% {
+        background-color: #000000; /* Black */
+    }
+    50% {
+        background-color: #444444; /* Dark Gray */
+    }
+    100% {
+        background-color: #000000; /* Black */
+    }
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: backgroundPulse 5s infinite ease-in-out; /* Apply animation to the body */
+}
+
+.container {
+    text-align: center;
+    width: 600px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.balance {
+    margin-bottom: 20px;
+}
+
+.betting {
+    margin-bottom: 30px;
+}
+
+.betting h3 {
+    margin-bottom: 10px;
+}
+
+.bet-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.bet-options {
+    display: flex;
+    gap: 15px;
+}
+
+/* Bet Button Styles */
+.bet-btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#bet-red {
+    background-color: red;
+}
+
+#bet-black {
+    background-color: black;
+}
+
+#bet-green {
+    background-color: green;
+}
+
+#bet-red:hover {
+    background-color: #ff6666; /* Lighter red */
+}
+
+#bet-black:hover {
+    background-color: #333333; /* Darker black */
+}
+
+#bet-green:hover {
+    background-color: #66cc66; /* Lighter green */
+}
+
+.bet-btn.selected {
+    background-color: #ff9800;
+}
+
+#bet-amount {
+    width: 160px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Roulette Styling */
+.roulette {
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roulette-container {
+    position: relative;
+    width: 450px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+}
+
+.wheel {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Wheel Box Animation */
+@keyframes redPulse {
+    0%, 100% {
+        background-color: #ff0000; /* Bright red */
+    }
+    50% {
+        background-color: #cc0000; /* Darker red */
+    }
+}
+
+@keyframes blackPulse {
+    0%, 100% {
+        background-color: #000000; /* Black */
+    }
+    50% {
+        background-color: #333333; /* Dark gray */
+    }
+}
+
+@keyframes greenPulse {
+    0%, 100% {
+        background-color: #00ff00; /* Bright green */
+    }
+    50% {
+        background-color: #009900; /* Darker green */
+    }
+}
+
+.wheel .box {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+
+.wheel .red {
+    animation: redPulse 3s infinite ease-in-out;
+}
+
+.wheel .black {
+    animation: blackPulse 3s infinite ease-in-out;
+}
+
+.wheel .green {
+    animation: greenPulse 3s infinite ease-in-out;
+}
+
+/* Center Indicator Line */
+.indicator {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1976D2;
+}
+
+.history {
+    margin-top: 30px;
+}
+
+.history-boxes {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.history-boxes div {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.history-boxes .red {
+    background-color: red;
+}
+
+.history-boxes .black {
+    background-color: black;
+}
+
+.history-boxes .green {
+    background-color: green;
+}
+
+.message {
+    font-weight: bold;
+    color: #f44336;
+    margin-top: 20px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="balance">
+            <h2>Balance: <span id="balance">$1000</span></h2>
+        </div>
+
+        <div class="betting">
+            <h3>Place your bet</h3>
+            <div class="bet-controls">
+                <input type="number" id="bet-amount" placeholder="Amount" min="1">
+                <div class="bet-options">
+                    <button id="bet-red" class="bet-btn" data-color="red">Red</button>
+                    <button id="bet-black" class="bet-btn" data-color="black">Black</button>
+                    <button id="bet-green" class="bet-btn" data-color="green">Green</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div class="roulette">
+            <div class="roulette-container">
+                <div class="indicator"></div>
+                <div class="wheel" id="roulette"></div>
+            </div>
+        </div>
+
+        <button id="spin-btn">Spin</button>
+
+        <div class="history">
+            <h3>Recent Results</h3>
+            <div id="history-boxes" class="history-boxes"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
